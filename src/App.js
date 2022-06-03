@@ -1,10 +1,17 @@
+import { BrowserRouter } from 'react-router-dom';
+import Pages from './pages/Pages';
+import Category from './components/Category';
+import Search from './components/Search';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <Search />
+      <Category />
+      <Pages />
+    </BrowserRouter>
+
   );
 }
 
