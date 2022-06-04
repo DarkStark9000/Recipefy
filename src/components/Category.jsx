@@ -55,7 +55,6 @@ const Slink = styled(NavLink)`
       font-size: 0.8rem;
     }
     svg{
-      color: #fff;
       font-size: 1.4rem;
     } 
     &.active{
