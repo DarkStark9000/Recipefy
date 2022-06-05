@@ -51,6 +51,7 @@ const Slink = styled(NavLink)`
     cursor: pointer;
     transform: scale(0.8);
 
+    color: #5200b7;
     h4{ 
       font-size: 0.8rem;
     }

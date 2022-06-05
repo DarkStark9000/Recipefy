@@ -40,15 +40,13 @@ const Grid = styled.div`
 
 const Card = styled.div`
     img{
-        width: 100%;
+        width: 70%;
+        height: 70%;
         border-radius: 18px;
-    }
-    a{
-        text-decoration: none;
     }
     h4{
         text-align: center;
-        padding: 1rem;
+        padding: 1rem; 
     }
     `;
 export default SearcheRes;

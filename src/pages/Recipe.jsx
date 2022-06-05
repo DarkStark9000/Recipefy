@@ -29,14 +29,12 @@ function Recipe() {
         <img src={recipe.image} alt={recipe.title} />
       </div>
       <Info>
-        <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}> Instructions </Button>
-        <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}> Ingredients </Button>
-
-        {activeTab === 'instructions' && (
-        <div>
-          <h3 dangerouslySetInnerHTML={{ __html: recipe.summary }} />
-          <h3 dangerouslySetInnerHTML={{ __html: recipe.instructions }} />
+        <div className="buttonBox">
+          <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}> Instructions </Button>
+          <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}> Ingredients </Button>
         </div>
+        {activeTab === 'instructions' && (
+        <div className="recipeBox" dangerouslySetInnerHTML={{ __html: recipe.instructions }} />
         )}
         {activeTab === 'ingredients' && (
           <ul>
@@ -53,41 +51,48 @@ function Recipe() {
 }
 
 const DetailWrap = styled(motion.div)`
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin: 2rem 0;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 4rem;
 
-    display: flex;
-    .active {
-        border-bottom: 2px solid #ffc107;
+    .recipeBox {
+      font-weight: 500;
+      font-size: 1rem;
+      text-align: justify;; 
     }
-    h2{
-        margin-bottom: 2rem;   
+
+    .buttonBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2rem;
     }
-    li{
-        font-size: 1.5rem;
-        list-style: none;
-        line-height: 2rem;
-    }
-    ul{
-        margin-top: 2rem;
-    }
+ 
 `;
 const Button = styled.button`
+    margin: 1rem;
     background: linear-gradient(35deg, #25064a, #890091);
     color: #fff;
     padding: 0.5rem 1.5rem;
     border-radius: 18px;
     outline: none;
     border: none;
-    cursor: pointer;
-    margin-top: 2rem;
-    &:active{
-        background: #D0FE00;
-    }
-
+    cursor: pointer; 
 `;
 
 const Info = styled.div`
-    margin-left: 4rem;    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 60rem;
+    height: 100%;
+    max-height: 60rem;
+    overflow: auto;
+    
 `;
 export default Recipe;
