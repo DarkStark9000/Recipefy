@@ -37,7 +37,7 @@ function Recipe() {
         <div className="recipeBox" dangerouslySetInnerHTML={{ __html: recipe.instructions }} />
         )}
         {activeTab === 'ingredients' && (
-          <ul>
+          <ul className="recipeBox">
             {recipe.extendedIngredients.map((ingredient) => (
               <li key={ingredient.id}>
                 <span>{ingredient.original}</span>
@@ -57,19 +57,20 @@ const DetailWrap = styled(motion.div)`
     justify-content: center;
     column-gap: 4rem;
     
-    .imgBox{
+    .imgBox {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-          }
+    }
+
     .recipeBox {
       font-weight: 500;
       font-size: 1rem;
       text-align: justify;; 
     }
 
-    .buttonBox {
+    .buttonBox { 
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -95,10 +96,6 @@ const Info = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 60rem;
-    height: 100%;
-    max-height: 60rem;
-    overflow: auto;
     
 `;
 export default Recipe;
