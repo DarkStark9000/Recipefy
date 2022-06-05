@@ -24,7 +24,7 @@ function Recipe() {
 
   return (
     <DetailWrap>
-      <div>
+      <div className="imgBox">
         <h2>{recipe.title}</h2>
         <img src={recipe.image} alt={recipe.title} />
       </div>
@@ -56,7 +56,13 @@ const DetailWrap = styled(motion.div)`
     align-items: flex-start;
     justify-content: center;
     column-gap: 4rem;
-
+    
+    .imgBox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+          }
     .recipeBox {
       font-weight: 500;
       font-size: 1rem;
