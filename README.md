@@ -1,4 +1,4 @@
-# Receipefy
+# Recipefy
 
 This web app is designed to provide a simple interface for culinary information like cooking instructions and ingredients.
 
