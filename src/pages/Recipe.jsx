@@ -33,8 +33,7 @@ function Recipe() {
           <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}> Instructions </Button>
           <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}> Ingredients </Button>
         </div>
-        {activeTab === 'instructions' && (
-        <div className="recipeBox" dangerouslySetInnerHTML={{ __html: recipe.instructions }} />
+        {activeTab === 'instructions' && (<div className="recipeBox" dangerouslySetInnerHTML={{ __html: recipe.instructions || 'No Instructions Available' }} />
         )}
         {activeTab === 'ingredients' && (
           <ul className="recipeBox">
