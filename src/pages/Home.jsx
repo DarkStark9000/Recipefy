@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import Popular from '../components/Popular';
-import Veg from '../components/Veg';
+import { motion } from "framer-motion";
+import Popular from "../components/Popular";
+import Veg from "../components/Veg";
 
 function Home() {
   return (

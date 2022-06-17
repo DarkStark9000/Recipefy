@@ -9,12 +9,15 @@ This project was bootstrapped with npx create-react-app.
 ## Attention
 
 This app makes use of [Spoonacular API](https://spoonacular.com/food-api/docs) to provide information about recipes.
-- ### It can only fetch 150 data points from the API per day. 
+
+- ### It can only fetch 150 data points from the API per day.
+
 ```
 So incase the app does not display any data, please understand that the API has hit its per day limit.
 ```
 
 - ### Certain recipes dont have a valid instructions in their database
+
 ```
 Thus for certain recipes the app can display a message "No instructions available"
 ```
@@ -24,12 +27,14 @@ Thus for certain recipes the app can display a message "No instructions availabl
 In the project directory, you can run:
 
 #### `npm start`
+
 ```
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 ```
+
 #### `npm install`
+
 ```
 Installs all the required dependencies from the package.json file.
 ```
-

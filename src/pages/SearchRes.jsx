@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import styled from "styled-components";
 
 function SearcheRes() {
   const [searchres, setSearchRes] = useState([]);
@@ -33,20 +33,20 @@ function SearcheRes() {
 }
 
 const Grid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 3rem;
-    `;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 3rem;
+`;
 
 const Card = styled.div`
-    img{
-        width: 70%;
-        height: 70%;
-        border-radius: 18px;
-    }
-    h4{
-        text-align: center;
-        padding: 1rem; 
-    }
-    `;
+  img {
+    width: 70%;
+    height: 70%;
+    border-radius: 18px;
+  }
+  h4 {
+    text-align: center;
+    padding: 1rem;
+  }
+`;
 export default SearcheRes;

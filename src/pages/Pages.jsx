@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
-import Cuisine from './Cuisine';
-import Home from './Home';
-import SearchRes from './SearchRes';
-import Recipe from './Recipe';
+import { Route, Routes } from "react-router-dom";
+import Cuisine from "./Cuisine";
+import Home from "./Home";
+import SearchRes from "./SearchRes";
+import Recipe from "./Recipe";
 
 function Pages() {
   return (
